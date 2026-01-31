@@ -13,7 +13,8 @@ function App() {
       >
         <color attach="background" args={['#050505']} />
         <Suspense fallback={null}>
-          <ScrollControls pages={5} horizontal damping={0.1}>
+          {/* Increased pages to 6 to accommodate Hero + 5 Sections */}
+          <ScrollControls pages={6} horizontal damping={0.1}>
             <Scene />
           </ScrollControls>
         </Suspense>
