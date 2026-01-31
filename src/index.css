@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap');
+
+:root {
+  --color-bg: #050505;
+  --color-text: #ffffff;
+  --color-primary: #ff0055; /* Approximate reddish tone like the user might like for 'Sumirai' energetic feel? Or maybe blue for future? I'll stick to neutral + accent */
+  --color-accent: #00e5ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow: hidden; /* We will handle scroll via R3F ScrollControls or custom */
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Scrollbar hiding if we go native later, but likely R3F scroll doesn't show bar by default or we customize */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
