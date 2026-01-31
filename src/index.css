@@ -3,7 +3,7 @@
 :root {
   --color-bg: #050505;
   --color-text: #ffffff;
-  --color-primary: #ff0055; /* Approximate reddish tone like the user might like for 'Sumirai' energetic feel? Or maybe blue for future? I'll stick to neutral + accent */
+  --color-primary: #ff0055;
   --color-accent: #00e5ff;
 }
 
@@ -13,17 +13,20 @@
   padding: 0;
 }
 
-body {
-  font-family: 'Outfit', sans-serif;
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   background-color: var(--color-bg);
-  color: var(--color-text);
-  overflow: hidden; /* We will handle scroll via R3F ScrollControls or custom */
-  width: 100vw;
-  height: 100vh;
 }
 
-/* Scrollbar hiding if we go native later, but likely R3F scroll doesn't show bar by default or we customize */
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--color-text);
+  /* Ensure canvas is visible */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
