@@ -330,118 +330,6 @@ ul {
     font-size: 1.2rem;
 }
 
-/* Map Card */
-.map-card {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    aspect-ratio: 16/9;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.map-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.7s ease;
-}
-
-.map-card:hover .map-img {
-    transform: scale(1.05);
-}
-
-.map-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(15, 5, 24, 0.9), transparent);
-}
-
-/* Map Animated Pin */
-.map-pin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.pin-dot {
-    width: 1rem;
-    height: 1rem;
-    background: #aa00ff;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #aa00ff;
-    position: relative;
-    z-index: 2;
-}
-
-.ping-circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background: #aa00ff;
-    opacity: 0.75;
-    animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-@keyframes ping {
-
-    75%,
-    100% {
-        transform: scale(3);
-        opacity: 0;
-    }
-}
-
-.pin-line {
-    width: 2px;
-    height: 3rem;
-    background: linear-gradient(to bottom, #aa00ff, transparent);
-    margin-top: 0.25rem;
-}
-
-/* Map Badge */
-.map-badge {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.badge-label {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-}
-
-.badge-value {
-    display: block;
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.badge-icon {
-    color: #aa00ff;
-}
-
 /* Info Cards */
 .info-grid {
     display: flex;
@@ -486,6 +374,53 @@ ul {
     font-size: 1.5rem;
     font-weight: 700;
     border-bottom: 2px solid #e0aaff;
+}
+
+.focus-card {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, rgba(170, 0, 255, 0.16), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.focus-eyebrow {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.focus-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+.focus-card p,
+.focus-list li {
+    color: var(--color-text-muted);
+}
+
+.focus-list {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.focus-list li {
+    display: flex;
+    gap: 0.65rem;
+    align-items: center;
+}
+
+.focus-list li::before {
+    content: "check_circle";
+    color: var(--accent-color);
+    font-family: "Material Symbols Outlined";
+    font-size: 1.15rem;
 }
 
 footer {
